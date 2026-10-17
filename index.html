@@ -4507,8 +4507,8 @@
 
 <body class="intro-active">
   <section class="logo-intro" id="logoIntro" aria-label="Sonic Flow video intro">
-    <video class="intro-video" id="introVideo" src="assets/intro-logo-animation-with-audio.mp4" autoplay muted loop playsinline webkit-playsinline preload="auto"></video>
-    <img class="intro-transition-logo" src="assets/sflogo.svg" alt="" aria-hidden="true">
+    <video class="intro-video" id="introVideo" src="intro-logo-animation-with-audio.mp4" autoplay muted loop playsinline webkit-playsinline preload="auto"></video>
+    <img class="intro-transition-logo" src="sflogo.svg" alt="" aria-hidden="true">
     <div class="intro-note">SONIC FLOW · INTRO</div>
     <button class="intro-sound-prompt" id="introSoundPrompt" type="button">
       사운드 켜기
@@ -4521,11 +4521,11 @@
   </section>
 
 
-  <video class="page-bg-video" id="pageBgVideo" src="assets/flow-gradient-background.mp4" autoplay muted loop playsinline webkit-playsinline preload="auto" controlslist="nodownload noplaybackrate nofullscreen" disablepictureinpicture aria-hidden="true"></video>
+  <video class="page-bg-video" id="pageBgVideo" src="flow-gradient-background.mp4" autoplay muted loop playsinline webkit-playsinline preload="auto" controlslist="nodownload noplaybackrate nofullscreen" disablepictureinpicture aria-hidden="true"></video>
   <canvas id="bgCanvas"></canvas>
   <canvas id="visualCanvas"></canvas>
 
-  <div class="logo"><img src="assets/sflogo.svg" alt="Sonic Flow logo"></div>
+  <div class="logo"><img src="sflogo.svg" alt="Sonic Flow logo"></div>
 
   <div class="top-actions">
     <button class="back-btn hidden" id="backBtn">이전</button>
@@ -4535,7 +4535,7 @@
     <section class="screen active" id="home">
       <div class="home-layout">
         <div class="home-card">
-          <img class="hero-logo" src="assets/sflogo.svg" alt="Sonic Flow">
+          <img class="hero-logo" src="sflogo.svg" alt="Sonic Flow">
           <p class="home-desc">소리의 결을 따라 흐르는 몰입형 시각 경험<br>호흡을 가다듬고 감각의 균형을 되찾아보세요.</p>
           <button class="start-btn" id="startBtn" type="button">
             <span>흐름 시작하기</span><span class="play-dot">▶</span>
@@ -4654,13 +4654,13 @@
     }
 
     const SCENE_ICONS = {
-      book: "assets/scene-icons/01_Academic_Overload.png",
-      time: "assets/scene-icons/02_Time_Pressure.png",
-      people: "assets/scene-icons/03_Social_Comparison.png",
-      star: "assets/scene-icons/04_Future_Uncertainty.png",
-      coin: "assets/scene-icons/05_Financial_Pressure.png",
-      heart: "assets/scene-icons/06_Interpersonal_Relationships.png",
-      spiral: "assets/scene-icons/07_Self_Imposed_Pressure.png"
+      book: "scene-icons/01_Academic_Overload.png",
+      time: "scene-icons/02_Time_Pressure.png",
+      people: "scene-icons/03_Social_Comparison.png",
+      star: "scene-icons/04_Future_Uncertainty.png",
+      coin: "scene-icons/05_Financial_Pressure.png",
+      heart: "scene-icons/06_Interpersonal_Relationships.png",
+      spiral: "scene-icons/07_Self_Imposed_Pressure.png"
     };
 
     const SCENES = [
@@ -4681,18 +4681,18 @@
 
     
     const SOUND_GROUPS = [
-      { title:"자연 소리", icon:"assets/sound-natural.svg", rgb:[130,190,255], options:[
+      { title:"자연 소리", icon:"sound-natural.svg", rgb:[130,190,255], options:[
         {key:"rain", label:"비 소리", filename:"rain", visual:"비의 결", motion:.98, rgb:[118,174,216]},
         {key:"waves", label:"파도 소리", filename:"waves", visual:"해류의 흐름", motion:1.16, rgb:[72,188,218]},
         {key:"wind", label:"바람 소리", filename:"wind", visual:"바람의 궤적", motion:1.12, rgb:[96,143,145]},
         {key:"forest", label:"숲 환경음", filename:"forest", visual:"숲의 빛", motion:.92, rgb:[102,176,132]}
       ]},
-      { title:"인공 소리", icon:"assets/sound-artificial.svg", rgb:[180,170,220], options:[
+      { title:"인공 소리", icon:"sound-artificial.svg", rgb:[180,170,220], options:[
         {key:"white", label:"화이트 노이즈", filename:"white-noise", visual:"노이즈 격자", motion:1.02, rgb:[188,194,214]},
         {key:"book", label:"책 넘기는 소리", filename:"book", visual:"페이지의 결", motion:.88, rgb:[184,164,138]},
         {key:"keyboard", label:"키보드 소리", filename:"keyboard", visual:"키 입력 파동", motion:1.20, rgb:[142,156,214]}
       ]},
-      { title:"음악", icon:"assets/sound-music.svg", rgb:[168,154,220], options:[
+      { title:"음악", icon:"sound-music.svg", rgb:[168,154,220], options:[
         {key:"ambient", label:"앰비언트", filename:"ambient", visual:"잔향 성운", motion:.82, rgb:[126,150,214]},
         {key:"lofi", label:"로파이", filename:"lofi", visual:"리듬 스펙트럼", motion:.98, rgb:[184,142,204]},
         {key:"meditation", label:"명상 음악", filename:"meditation", visual:"호흡의 원", motion:.76, rgb:[118,180,170]}
@@ -5010,9 +5010,9 @@
     function renderLevels(){
       pressureScale.innerHTML="";
       const levelIcons = [
-        "assets/level-low-brain.png",
-        "assets/level-mid-brain.png",
-        "assets/level-high-brain.png"
+        "level-low-brain.png",
+        "level-mid-brain.png",
+        "level-high-brain.png"
       ];
       LEVELS.forEach((lv, levelIndex)=>{
         const button = document.createElement("button");
@@ -5040,9 +5040,9 @@
     function renderSounds(){
       soundLayout.innerHTML="";
       const categoryImages=[
-        "assets/sound-category-natural.png",
-        "assets/sound-category-artificial.png",
-        "assets/sound-category-music.png"
+        "sound-category-natural.png",
+        "sound-category-artificial.png",
+        "sound-category-music.png"
       ];
       SOUND_GROUPS.forEach((group,groupIndex)=>{
         const box=document.createElement("button");
@@ -5073,11 +5073,11 @@
       screens.soundDetail.classList.toggle("detail-artificial", isArtificial);
       detailVisual.classList.toggle("is-visible", isNatural || isMusic || isArtificial);
       detailVisual.style.backgroundImage=isNatural
-        ? "url('assets/natural-detail-landscape.png')"
+        ? "url('natural-detail-landscape.png')"
         : isMusic
-          ? "url('assets/music-detail-concert-hall.jpg')"
+          ? "url('music-detail-concert-hall.jpg')"
           : isArtificial
-            ? "url('assets/artificial-detail-tools.jpg')"
+            ? "url('artificial-detail-tools.jpg')"
             : "none";
       detailList.innerHTML="";
       group.options.forEach(opt=>{
@@ -5221,7 +5221,7 @@
       return audioCtx.state==="running";
     }
 
-    function audioPathFor(ext){ return `audio/${appState.sound.filename}.${ext}`; }
+    function audioPathFor(ext){ return `${appState.sound.filename}.${ext}`; }
     function isAudioPlaying(){
       return audioMode==="buffer" ? bufferPlaying : !audioEl.paused && !audioEl.ended;
     }
@@ -5259,7 +5259,7 @@
             script.onload=null; script.onerror=null; script.remove();
             if(error) reject(error); else resolve();
           };
-          script.src=`audio/offline/${encodeURIComponent(filename)}.js`;
+          script.src=`offline/${encodeURIComponent(filename)}.js`;
           script.onload=()=>finish();
           script.onerror=()=>finish(new Error("Local sound file could not be opened"));
           document.head.appendChild(script);
@@ -5274,7 +5274,7 @@
       if(window.location.protocol==="file:") return embeddedAudioBytes(filename);
       for(const ext of ["mp3","wav"]){
         try {
-          const response=await fetch(`audio/${encodeURIComponent(filename)}.${ext}`);
+          const response=await fetch(`${encodeURIComponent(filename)}.${ext}`);
           if(response.ok) return await response.arrayBuffer();
         } catch(ignored) {}
       }
@@ -5301,10 +5301,10 @@
           if(requestId!==audioRequestId) return finish(false);
           if(!triedWav){
             triedWav=true;
-            audioEl.src=`audio/${sound.filename}.wav`; audioEl.load();
+            audioEl.src=`${sound.filename}.wav`; audioEl.load();
           } else finish(false);
         };
-        audioEl.src=`audio/${sound.filename}.mp3`; audioEl.load();
+        audioEl.src=`${sound.filename}.mp3`; audioEl.load();
       });
     }
 
@@ -5949,7 +5949,7 @@
         `<strong>상황</strong> ${appState.scene.label}<br>`+
         `<strong>강도</strong> ${appState.level.label}<br>`+
         `<strong>소리</strong> ${appState.soundGroup.title} · ${appState.sound.label}<br>`+
-        `<strong>파일</strong> audio/${appState.sound.filename}.mp3 또는 .wav<br>`+
+        `<strong>파일</strong> ${appState.sound.filename}.mp3 또는 .wav<br>`+
         `<strong>시각화</strong> ${appState.sound.visual} · 주파수 반응형`;
       document.body.classList.toggle("keyboard-experience", appState.sound?.key === "keyboard");
       document.body.classList.toggle("wave-experience", appState.sound?.key === "waves");
